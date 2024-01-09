@@ -1,0 +1,96 @@
+[
+    {
+        "lbl":"Full Name",
+        "tag":"input",
+        "type":"text",
+        "model":"full name",
+        "errorMessage":"",
+        "value":"",
+        "placeholder":"enter your full name",
+        "criteria":["Required"]
+    },
+    {
+        "lbl":"user Id",
+        "tag":"input",
+        "type":"text",
+        "model":"uid",
+        "errorMessage":"",
+        "value":"",
+        "placeholder":"enter user id",
+        "criteria":["Required","EmailFormat"]
+    },
+    {
+        "lbl":"password",
+        "tag":"input",
+        "type":"password",
+        "model":"pwd",
+        "errorMessage":"",
+        "value":"",
+        "placeholder":"create your password",
+        "criteria":["Required","Min5Chars"]
+    },
+    {
+        "lbl":"Gender",
+        "tag":"input",
+        "type":"radio",
+        "model":"gender",
+        "errorMessage":"",
+        "values":["M","F"],
+        "value":"",
+        "placeholder":"",
+        "options":["Male","Female"],
+        "criteria":["Required"]
+    },
+    {
+        "lbl":"Date of Birth",
+        "tag":"input",
+        "type":"date",
+        "model":"dob",
+        "errorMessage":"",
+        "value":"",
+        "placeholder":"",
+        "criteria":["Required"]
+    },
+    {
+        "lbl":"Hobbies",
+        "tag":"input",
+        "type":"checkbox",
+        "model":"hobbies",
+        "errorMessage":"",
+        "value":"",
+        "options":["Cricket","Football","Boxing"],
+        "values":["cric","fb","box"],
+        "placeholder":"",
+        "criteria":["Required"]
+    },
+    {
+        "lbl": "Country",
+        "tag": "select",
+        "model": "country",
+        "errorMessage": "",
+        "options": [
+            "India",
+            "China",
+            "United States"
+        ],
+        "values": [
+            "ind",
+            "chi",
+            "us"
+        ],
+        "value": "",
+        "criteria": [
+            "Required"
+        ]
+    },
+    {
+        "lbl": "Address",
+        "tag": "textarea",
+        "model": "address",
+        "errorMessage": "",
+        "value": "",
+        "criteria": [
+            "Required"
+        ]
+    }
+]
