@@ -5,6 +5,7 @@ import configuration from './configuration.json'
 import { Input } from '@/inputControls/input'
 import { min5char } from '@/validations/appRegExp'
 import {  handleFieledvalidation, handleFormvalidation } from '@/validations/appvalidations'
+import Link from 'next/link'
 
 export const Login = () => {
     const [inputControls, setInputControls]=useState(configuration);
@@ -14,7 +15,13 @@ export const Login = () => {
         
     }
     const handleLogin =()=>{
-        handleFormvalidation()
+        const [isFormInvalid, clonedInputControls, dataObj]=handleFormvalidation(inputControls)
+        if(isFormInvalid){
+            setInputControls(clonedInputControls);
+            return;
+        }
+        console.log("request sent");
+        console.log(dataObj);
     }
   return (
     <div className='container-fluid'>
@@ -35,7 +42,7 @@ export const Login = () => {
     <div className='row'>
     <div className='offset-sm-4 col-sm-8'>
         <button className='btn btn-primary' onClick={handleLogin}>Login</button>
-        <a href='./register' className=' m-2'>Register page</a>
+        <Link href='./register' className=' m-2'>Register page</Link>
     </div>
     </div>
     </div>
